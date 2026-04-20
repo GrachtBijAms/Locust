@@ -1,4 +1,4 @@
-**Locust Playwright Framework**
+# Locust Playwright Framework
 
 A browser-based **performance testing** framework for SauceDemo built with Locust and Playwright.
 
@@ -15,14 +15,14 @@ Why this project is useful
 
 This framework helps you test more than raw API throughput. It measures end-to-end browser behavior and captures timings for each user action in the journey.
 
-# Key benefits:
+## Key benefits:
 - Real browser execution with Playwright
 - Step-level performance visibility with Locust events
 - Human-like delays using think time
 - Modular page objects for maintainability
 - Support for valid and invalid login flows
 
-# Project structure
+## Project structure
 ```
 project/
 ├── config/
@@ -39,14 +39,14 @@ project/
 └── utils/
     └── helpers.py
 ```
-# Requirements
+## Requirements
 
 - Python 3.10+
 - Locust
 - locust-plugins
 - Playwright
 
-# Setup
+## Setup
 
 Install dependencies:
 ```
@@ -55,15 +55,15 @@ playwright install
 ```
 If you use a virtual environment, activate it before installing packages.
 
-#Configuration
+## Configuration
 
 Update your configuration values in config/settings.py:
 
-BASE_URL = "https://www.saucedemo.com"
+BASE_URL = "<Application URL>"
 HEADLESS = False
 SLOW_MO = 0
 
-# Running the test
+## Running the test
 
 Locust web UI:
 
@@ -80,7 +80,7 @@ Single-user debug run:
 
 python tests/locustfile.py
 
-# Test behavior
+## Test behavior
 
 The current scenario follows one complete journey:
 1. Open login page
@@ -93,7 +93,7 @@ The current scenario follows one complete journey:
 8. View cart
 9. Logout
 
-# Page objects
+## Page objects
 
 The framework uses a simple Page Object Model:
 
@@ -104,20 +104,20 @@ The framework uses a simple Page Object Model:
 
 This keeps the Locust task readable and makes selector updates easier.
 
-# Helper methods
+## Helper methods
 
 The utils/helpers.py module is used for shared utilities such as:
 - selecting a random test user
 - adding think time between actions
 
-# Troubleshooting
+## Troubleshooting
 
 Browser does not appear
 
 Set HEADLESS = False in config/settings.py and run with a single user for debugging.
 
 
-# Contributing
+## Contributing
 
 If you want to extend the framework:
 - add new page objects under pages/
